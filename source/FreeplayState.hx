@@ -138,6 +138,10 @@ class FreeplayState extends MusicBeatState
 			trace(md);
 		 */
 
+		#if android
+		addVirtualPad(FULL, A_B);
+		#end
+
 		super.create();
 	}
 
@@ -293,9 +297,9 @@ class FreeplayState extends MusicBeatState
 		// lerpScore = 0;
 		#end
 
-		#if PRELOAD_ALL
+		/*#if PRELOAD_ALL
 		FlxG.sound.playMusic(Paths.inst(songs[curSelected].songName), 0);
-		#end
+		#end*/
 
 		var bullShit:Int = 0;
 
